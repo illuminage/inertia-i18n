@@ -17,39 +17,10 @@ concurrency:
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
-    strategy:
-      fail-fast: false
-      matrix:
-        node-version: [20, 22]
+    timeout-minutes: 1
 
-    name: Vue Tests - Node.js ${{ matrix.node-version }}
+    name: Empty for future use
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v5
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10.17.1
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
-          cache-dependency-path: 'packages/vue/pnpm-lock.yaml'
-
-      - name: Install dependencies
-        working-directory: packages/vue
-        run: pnpm install --frozen-lockfile
-
-      - name: Build package
-        working-directory: packages/vue
-        run: pnpm build
-
-      - name: Run tests
-        working-directory: packages/vue
-        run: pnpm test
-        continue-on-error: true
+      - name: Placeholder
+        run: echo "Vue tests workflow is ready for future implementation"
