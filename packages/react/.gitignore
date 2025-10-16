@@ -1,0 +1,14 @@
+# Dependencies
+/node_modules
+.pnpm-store
+
+# Build output
+/dist
+*.tsbuildinfo
+
+# Logs
+*.log
+pnpm-debug.log*
+
+# Coverage
+/coverage

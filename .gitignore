@@ -1,0 +1,12 @@
+# Global IDE files
+/.idea
+/.vscode
+
+# Global temporary files
+*.tmp
+*.temp
+.DS_Store
+
+# Environment files
+.env
+.env.local

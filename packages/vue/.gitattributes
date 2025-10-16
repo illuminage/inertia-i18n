@@ -1,0 +1,4 @@
+# Vue package specific attributes
+
+# Package-specific export-ignore
+/.gitignore             export-ignore

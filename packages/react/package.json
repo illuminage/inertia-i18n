@@ -1,0 +1,21 @@
+{
+    "name": "@inertia-i18n/react",
+    "version": "1.0.0",
+    "description": "React hooks and utilities for Inertia.js internationalization",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsc --watch",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "react",
+        "inertia",
+        "i18n",
+        "internationalization"
+    ],
+    "author": "",
+    "license": "MIT",
+    "packageManager": "pnpm@10.17.1"
+}

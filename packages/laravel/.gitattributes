@@ -1,0 +1,15 @@
+# Laravel package specific attributes
+
+# PHP files
+*.php                   text eol=lf
+
+# Laravel specific configuration
+*.xml                   text eol=lf
+*.neon                  text eol=lf
+
+# Package-specific export-ignore
+/phpunit.xml.dist       export-ignore
+/tests                  export-ignore
+/phpstan.neon.dist      export-ignore
+/phpstan-baseline.neon  export-ignore
+/build                  export-ignore
