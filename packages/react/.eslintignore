@@ -5,9 +5,5 @@
 # Build output
 /dist
 
-# Logs
-*.log
-pnpm-debug.log*
-
 # Coverage
 /coverage

@@ -1,1 +1,1 @@
-console.log('Hello from React');
+console.log("Hello from React");
