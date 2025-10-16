@@ -1,21 +1,50 @@
 {
-    "name": "@inertia-i18n/react",
-    "version": "1.0.0",
-    "description": "React hooks and utilities for Inertia.js internationalization",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
-    "scripts": {
-        "build": "tsc",
-        "dev": "tsc --watch",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [
-        "react",
-        "inertia",
-        "i18n",
-        "internationalization"
-    ],
-    "author": "",
-    "license": "MIT",
-    "packageManager": "pnpm@10.17.1"
+  "name": "@inertia-i18n/react",
+  "version": "1.0.0",
+  "description": "React hooks and utilities for Inertia.js internationalization",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"**/*.{ts,tsx}\"",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "react",
+    "inertia",
+    "i18n",
+    "internationalization"
+  ],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.17.1",
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^24.6.0",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.4",
+    "eslint": "^9.36.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.22",
+    "globals": "^16.4.0",
+    "prettier": "^3.6.2",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.45.0",
+    "vite": "^7.1.7",
+    "vite-plugin-dts": "^4.5.4",
+    "vitest": "^3.2.4"
+  }
 }

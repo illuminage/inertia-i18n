@@ -1,0 +1,34 @@
+name: Laravel Style
+
+on:
+  push:
+    paths:
+      - 'packages/laravel/**.php'
+
+permissions:
+  contents: write
+
+jobs:
+  style:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Fix code style
+        uses: aglipanci/laravel-pint-action@v2
+        with:
+          configPath: packages/laravel
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: |
+            style(laravel): format code according to Pint rules
+
+            Automatically format PHP code to maintain consistent style
+            across the Laravel package using Laravel Pint.

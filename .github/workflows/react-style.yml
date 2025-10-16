@@ -1,0 +1,51 @@
+name: React Style
+
+on:
+  push:
+    paths:
+      - 'packages/react/**/*.ts'
+      - 'packages/react/**/*.tsx'
+
+permissions:
+  contents: write
+
+jobs:
+  style:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.17.1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+          cache-dependency-path: 'packages/react/pnpm-lock.yaml'
+
+      - name: Install dependencies
+        working-directory: packages/react
+        run: pnpm install --frozen-lockfile
+
+      - name: Fix code style
+        working-directory: packages/react
+        run: pnpm format || echo "No format script found"
+        continue-on-error: true
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: |
+            style(react): format code according to project rules
+
+            Automatically format TypeScript and TSX files to maintain
+            consistent code style across the React package.

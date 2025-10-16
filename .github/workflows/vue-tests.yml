@@ -1,0 +1,26 @@
+name: Vue Tests
+
+on:
+  push:
+    paths:
+      - 'packages/vue/**'
+      - '.github/workflows/vue-tests.yml'
+  pull_request:
+    paths:
+      - 'packages/vue/**'
+      - '.github/workflows/vue-tests.yml'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+
+    name: Empty for future use
+
+    steps:
+      - name: Placeholder
+        run: echo "Vue tests workflow is ready for future implementation"
